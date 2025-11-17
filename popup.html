@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Color Changer</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="icons/icon16.png" alt="Extension Logo" class="logo" />
+        <h1>Color Changer</h1>
+        <p>Customize any website's appearance</p>
+      </div>
+
+      <div class="toggle-section">
+        <div class="toggle-item">
+          <span class="toggle-label">Enable Theme</span>
+          <label class="toggle">
+            <input
+              type="checkbox"
+              id="enableTheme"
+              title="Toggle theme on/off"
+            />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="color-section">
+        <h3 class="section-title">Colors</h3>
+        <div class="color-item">
+          <span class="color-label">Background</span>
+          <input
+            type="color"
+            id="bgColor"
+            class="color-input"
+            value="#ffffff"
+            title="Choose background color"
+          />
+        </div>
+        <div class="color-item">
+          <span class="color-label">Text</span>
+          <input
+            type="color"
+            id="textColor"
+            class="color-input"
+            value="#000000"
+            title="Choose text color"
+          />
+        </div>
+        <div class="color-item">
+          <span class="color-label">Links</span>
+          <input
+            type="color"
+            id="linkColor"
+            class="color-input"
+            value="#0066cc"
+            title="Choose link color"
+          />
+        </div>
+      </div>
+
+      <div class="special-modes">
+        <h3 class="section-title">Special Modes</h3>
+        <button id="partyMode" class="mode-button" data-mode="party">
+          🎉 Party Mode
+        </button>
+        <!-- <button id="focusMode" class="mode-button" data-mode="focus">
+          🎯 Focus Mode
+        </button>
+        <button id="smoothMode" class="mode-button" data-mode="smooth">
+          🌸 Smooth Mode
+        </button> -->
+      </div>
+
+      <div class="reset-section">
+        <button id="resetButton" class="reset-button">Reset to Default</button>
+      </div>
+    </div>
+
+    <div id="status" class="status"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>
